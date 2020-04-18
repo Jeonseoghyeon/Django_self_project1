@@ -6,4 +6,5 @@
     <p>{{article.created_at}}</p>
     <p>{{article.created_at}}</p>
     <a href="{% url 'articles:update' article.id %}">edit</a>
+    <a href="{% url 'articles:delete' article.id %}">delete</a>
 {% endblock %}
