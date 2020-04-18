@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block body %}
+    {% if user.is_authenticated %}
+        <div class="container">
+                <div class="row">
+            {% for article in articles %}
+                    <div class="col-sm-4">
+                        <a href="{% url 'articles:detail' article.id %}">{{ article.title }}</a>
+                    </div>
+            {% endfor %}
+                </div>
+        </div>
+    {% else %}
+        <a href="{% url 'accounts:login' %}">Login 하세요</h1>
+    {% endif %}
+{% endblock %}
