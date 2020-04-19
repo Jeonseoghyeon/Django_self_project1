@@ -2,11 +2,11 @@
 
 {% block body %}
     {% if user.is_authenticated %}
-        <div class="container">
+        <div class="container"> <!--Bootstrap grid 적용 -->
                 <div class="row">
             {% for article in articles %}
                     <div class="col-sm-4">
-                        <a href="{% url 'articles:detail' article.id %}">{{ article.title }}</a>
+                        <a href="{% url 'articles:detail' article.id %}">{{ article.title }}</a> <!-- 이놈을 통해 7/detail/ 이런 주소로 들어갈 수 있다. articles app 안의 detail이라는 urlnamespace를 가진 놈으로 이동, pk(속성)값은 article.id !! -->
                     </div>
             {% endfor %}
                 </div>
