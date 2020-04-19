@@ -13,9 +13,9 @@
         <h3 class="m-4">INSTAGRAM</h2>
         <img class ="m-4" src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcRfXNwa0-bWOR2pR44MxVJN9eSSBm6fHSx-vaH1dMk5bKM5FpTv&usqp=CAU" alt="인스타그램">
         <br>
-        {% if user.is_authenticated %}
+        {% if user.is_authenticated %} <!-- LOGIN 되어있으면, -->
             <a class="text-success" href="{% url 'accounts:logout' %}">LOG OUT</a>
-        {% else %}
+        {% else %} <!-- LOGIN 안되어있으면, -->
             <a class="text-success" href="{% url 'accounts:login' %}">LOG IN</a>
             <a class="text-success" href="{% url 'accounts:signup' %}">SIGN UP</a>
         {% endif %}
