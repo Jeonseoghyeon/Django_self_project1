@@ -1,9 +1,9 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} <!-- 'base.html' 적용 -->
 
-{% block body %}
+{% block body %} <!-- 이 부분에 각 페이지의 내용 작성해준다 -->
 <form action="" method="POST">
-    {% csrf_token %} <!--POST방식으로
-    {{ form.as_p }}
+    {% csrf_token %} <!--POST방식으로 하게되면 이 내용 꼭 적어줘야 한다.. 원리는 더 공부할 것-->
+    {{ form.as_p }} <!-- signup.html 들어온다 -> signup 함수 실행 -> form을 받아오게 됨 -> 이놈을 <p>태그로 다 받아온다.-->
     <input type="submit">
 </form>
 {% endblock %}
