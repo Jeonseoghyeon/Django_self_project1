@@ -2,7 +2,7 @@
 
 {% block body %}
 <form action="" method="POST">
-    {% csrf_token %}
+    {% csrf_token %} <!--POST방식으로
     {{ form.as_p }}
     <input type="submit">
 </form>
